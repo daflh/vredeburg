@@ -1,8 +1,9 @@
+{%- set lazyImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1' height='500' width='960'/%3E" -%}
 {% for item in paged.items %}
 <div class="flex-single sm:flex-double md:flex-triple self-stretch p-2 mb-2">
     <div class="rounded shadow-md h-full">
         <a href="{{ item.url }}">
-            <img class="w-full m-0 rounded-t" src="{% if item.data.thumb %}{{ item.data.thumb }}{% else %}/assets/img/no-image.svg{% endif %}" alt="This post thumbnail">
+            <img class="w-full m-0 rounded-t lazy" src="{{ lazyImage }}" data-src="{% if item.data.thumb %}{{ item.data.thumb }}{% else %}/assets/img/no-image.svg{% endif %}" alt="This post thumbnail">
         </a>
         <div class="px-6 py-5">
             <div class="font-semibold text-lg mb-2">

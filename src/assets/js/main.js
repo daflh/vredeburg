@@ -23,3 +23,13 @@ menuToggle.addEventListener("click", () => {
     menu.classList.toggle("hidden");
     searchBox.classList.toggle("hidden");
 });
+
+// simple lazy load
+const lazyImages = document.getElementsByClassName("lazy");
+document.addEventListener('DOMContentLoaded', () => {
+    [...lazyImages].forEach((elem) => {
+        let originalImage = elem.dataset.src;
+        elem.setAttribute("src", originalImage);
+        elem.removeAttribute("data-src");
+    });
+}, false);
