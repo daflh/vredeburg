@@ -1,0 +1,54 @@
+{%- set metaTitle -%}
+    {%- if not title -%}{{ site.title }} - {{ site.description | safe }}
+    {%- else -%}{{ title | safe }} | {{ site.title }}
+    {%- endif -%}
+{%- endset -%}
+{%- set metaDesc -%}
+    {%- if not description -%}{{ site.description | safe }}
+    {%- else -%}{{ description | safe }}
+    {%- endif -%}
+{%- endset -%}
+{%- set metaKeywords -%}
+    {%- if tags -%}{%- for tag in tags -%}{{ tag }},{%- endfor -%}{%- endif -%}
+    {%- if site.keywords -%}
+        {%- for keyword in site.keywords -%}
+            {{ keyword }}{%- if not loop.last %},{% endif -%}
+        {%- endfor -%}
+    {%- endif -%}
+{%- endset -%}
+<!DOCTYPE html>
+<html lang="id">
+	<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ metaTitle }}</title>
+        <meta name="title" content="{{ metaTitle }}">
+        <meta name="description" content="{{ metaDesc }}">
+        <meta name="keywords" content="{{ metaKeywords }}">
+        <meta name="author" content="{{ author.name }}">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+        <link rel="stylesheet" href="/assets/css/main.css">
+	</head>	
+  
+	<body class="flex flex-col h-screen bg-white text-gray-800 leading-normal break-words">
+        {% include "partials/header.njk" %}
+        <div class="mx-7 lg:mx-6 mt-32 flex-grow">
+            <div class="max-w-5xl mx-auto">
+                {{ content | safe }}
+            </div>
+        </div>
+        {% include "partials/copyright.njk" %}
+        <script src="/assets/js/main.js"></script>
+        {% if page.url === "/search/" %}
+        <script src="/assets/js/search.js"></script>
+        {% endif %}
+	</body>
+</html>

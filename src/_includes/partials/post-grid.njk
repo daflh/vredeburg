@@ -1,0 +1,22 @@
+{% for item in paged.items %}
+<div class="flex-single sm:flex-double md:flex-triple self-stretch p-2 mb-2">
+    <div class="rounded shadow-md h-full">
+        <a href="{{ item.url }}">
+            <img class="w-full m-0 rounded-t" src="{% if item.data.thumb %}{{ item.data.thumb }}{% else %}/assets/img/no-image.svg{% endif %}" alt="This post thumbnail">
+        </a>
+        <div class="px-6 py-5">
+            <div class="font-semibold text-lg mb-2">
+                <a class="text-gray-900 hover:text-gray-700" href="{{ item.url }}">{{ item.data.title }}</a>
+            </div>
+            <p class="text-gray-700 text-base mb-1" title="Published date">{{ item.data.page.date | readableDate }}</p>
+            <p class="text-gray-800 text-tiny">
+                {% if item.data.description %}
+                {{ item.data.description }}
+                {% else %}
+                {{ item.templateContent | striptags | truncate(90, true) }}
+                {% endif %}
+            </p>
+        </div>
+    </div>
+</div>
+{% endfor %}

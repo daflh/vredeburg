@@ -1,0 +1,14 @@
+[
+    {
+        "url": "/about",
+        "label": "About"
+    },
+    {
+        "url": "/tags",
+        "label": "Tags"
+    },
+    {
+        "url": "/search",
+        "label": "Search"
+    }
+]

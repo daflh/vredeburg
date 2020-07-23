@@ -1,0 +1,26 @@
+<div id="disqus_thread"></div>
+<script>
+    let disqusLoaded = false;
+    let disqus_config = function () {
+        this.page.url = '{{ site.url }}{{ page.url }}';
+        this.page.identifier = '{{ page.fileSlug }}';
+    };
+    function loadComments() {
+        if (!disqusLoaded) {
+            disqusLoaded = true;
+            const d = document, s = d.createElement('script');
+            s.src = '//{{ site.disqusShortname }}.disqus.com/embed.js';
+            (d.head || d.body).appendChild(s);
+        }
+    }
+    if(!!window.IntersectionObserver) {
+        const disqusEl = document.getElementById('disqus_thread');
+        const intersectionObserver = new IntersectionObserver(function(entries, observer) {
+            if (entries && entries[0] && entries[0].isIntersecting) {
+                loadComments();
+                observer.unobserve(disqusEl);
+            }
+        });
+        intersectionObserver.observe(disqusEl);
+    }
+</script>

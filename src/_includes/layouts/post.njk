@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<div class="mb-12">
+    <h1 class="mt-0 mb-2 text-center font-medium">{{ title }}</h1>
+    <div class="text-center">Published on {{ page.date | readableDate }}</div>
+    {% if tags %}
+    <div class="mt-3 text-center">
+        {% for tag in tags %}
+        <a href="/tags/{{ tag }}" class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-medium text-gray-700 m-1/2">#{{ tag }}</a>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% if thumb %}
+    <div class="mt-9 -mx-7 md:mx-0">
+        <img class="w-full max-w-2xl mx-auto" src="{{ thumb }}" alt="This post thumbnail">
+    </div>
+    {% endif %}
+</div>
+<div id="content" class="leading-relaxed text-lg">
+    {{ content | safe }}
+</div>
+{% if site.disqusShortname %}
+<div class="mt-10">
+    {% if process.environment === "production" %}
+    {% include "partials/disqus.njk" %}
+    {% else %}
+    <div class="text-lg italic text-gray-700">Disqus comments only available for production</div>
+    {% endif %}
+</div>
+{% endif %}

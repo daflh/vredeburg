@@ -1,0 +1,30 @@
+---
+layout: default
+title: About Me
+---
+
+<div class="flex flex-col items-center leading-relaxed text-lg">
+    {% if author.avatar %}
+    <a href="{{ author.homepage }}" target="_blank" rel="noopener">
+        <img class="h-32 md:h-40 rounded-full" alt="Author avatar" src="{{ author.avatar }}">
+    </a>
+    {% endif %}
+    <div class="text-center mt-8">
+        <h1 class="text-2xl mt-0 mb-1">
+            <a href="{{ author.homepage }}" target="_blank" rel="noopener">{{ author.name }}</a>
+        </h1>
+        {% if author.email %}
+        <div class="text-gray-600">
+            <a href="mailto:{{ author.email }}">{{ author.email }}</a>
+        </div>
+        {% endif %}
+        {% if author.phone %}
+        <div class="text-gray-600">
+            <a href="tel:{{ author.phone }}">{{ author.phone }}</a>
+        </div>
+        {% endif %}
+        {% if author.bio %}
+        <p class="mt-3 text-gray-700">{{ author.bio }}</p>
+        {% endif %}
+    </div>
+</div>
