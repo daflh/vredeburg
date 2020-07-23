@@ -1,6 +1,5 @@
 ---
 title: "7 Things You Should Know About Running a Small Business"
-description: "Running a small business is really a big step for every entrepreneur, but it’s not something that can’t be accomplished from an entrepreneurial side"
 date: 2020-02-23T02:33
 thumb: "small-business.jpg"
 tags: 
