@@ -30,6 +30,8 @@
         <meta name="author" content="{{ author.name }}">
         <meta name="robots" content="index, follow">
         <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+        <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png">
+        <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
         <link rel="dns-prefetch" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -40,11 +42,15 @@
   
 	<body class="flex flex-col h-screen bg-white text-gray-800 leading-normal break-words">
         {% include "partials/header.njk" %}
-        <div class="mx-7 lg:mx-6 mt-32 flex-grow">
+        <main class="mx-7 lg:mx-6 mt-32 flex-grow">
+            {% if layout === "post" %}
+            {{ content | safe }}
+            {% else %}
             <div class="max-w-5xl mx-auto">
                 {{ content | safe }}
             </div>
-        </div>
+            {% endif %}
+        </main>
         {% include "partials/footer.njk" %}
         <script src="/assets/js/main.js"></script>
         {% if page.url === "/search/" %}
