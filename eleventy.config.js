@@ -39,7 +39,7 @@ module.exports = (config) => {
             input: "src",
             output: "dist"
         },
-        templateFormats: ["md", "njk"],
+        templateFormats: ["md", "njk", "html"],
         dataTemplateEngine: "njk",
         markdownTemplateEngine: "njk"
     }
