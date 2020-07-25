@@ -1,4 +1,16 @@
 <div class="mt-3 clearfix">
-    <a {% if not paged.first %}href="{{ pagination.href.previous }}"{% endif %} class="float-left bg-white font-semibold py-2 px-4 border rounded shadow-md text-gray-800 {% if not paged.first %}cursor-pointer hover:bg-gray-100{% else %}cursor-default text-opacity-75{% endif %}">Previous</a>
-    <a {% if not paged.last %}href="{{ pagination.href.next }}"{% endif %} class="float-right bg-white font-semibold py-2 px-4 border rounded shadow-md text-gray-800 {% if not paged.last %}cursor-pointer hover:bg-gray-100{% else %}cursor-default text-opacity-75{% endif %}">Next</a>
+    <span class="float-left bg-white font-semibold py-2 px-4 border rounded shadow-md text-gray-800 {% if not paged.first %}cursor-pointer hover:bg-gray-100{% else %}cursor-default text-opacity-75{% endif %}">
+        {% if not paged.first %}
+        <a href="{{ pagination.href.previous }}">Previous</a>
+        {% else %}
+        Previous
+        {% endif %}
+    </span>
+    <span class="float-right bg-white font-semibold py-2 px-4 border rounded shadow-md text-gray-800 {% if not paged.last %}cursor-pointer hover:bg-gray-100{% else %}cursor-default text-opacity-75{% endif %}">
+        {% if not paged.last %}
+        <a href="{{ pagination.href.next }}">Next</a>
+        {% else %}
+        Next
+        {% endif %}
+    </span>
 </div>
