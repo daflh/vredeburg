@@ -31,5 +31,10 @@ npm start
 npm run build
 ```
 
+### For debugging purposes
+```bash
+npm run debug
+```
+
 ## Configuration
 To change the title, description, author data, menu/nav item, etc, go to `src/_data/`.
