@@ -7,7 +7,7 @@
         </div>
         <nav id="menu" class="order-last md:order-none items-center flex-grow w-full md:w-auto md:flex hidden mt-2 md:mt-0">
             {% for item in menu %}
-            <a href="{{ item.url }}" {% if item.newTab %}target="_blank" {% endif %}class="block mt-4 md:inline-block md:mt-0 font-medium text-gray-700 hover:text-teal-600 text-base mr-4">{{ item.label }}</a>
+            <a href="{{ item.url }}" {% if item.newTab %}target="_blank" rel="noopener" {% endif %}class="block mt-4 md:inline-block md:mt-0 font-medium text-gray-700 hover:text-teal-600 text-base mr-4">{{ item.label }}</a>
             {% endfor %}
         </nav>
         <form id="search" action="/search" class="order-last sm:order-none flex-grow items-center justify-end hidden sm:block mt-6 sm:mt-0">
