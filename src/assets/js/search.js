@@ -41,7 +41,7 @@
         let resultsFound = filteredPosts.length;
         let slicedPosts = filteredPosts.slice(start - 1, start + size - 1);
         let lastSliced = start + slicedPosts.length - 1;
-        let show = start < lastSliced ? `items ${start}-${lastSliced}` : `item ${start}`;
+        let show = start < lastSliced ? `${start} to ${lastSliced}` : start;
         info.textContent = `Showing ${show} of ${resultsFound} result${resultsFound > 1 ? "s" : ""} found`;
         slicedPosts.forEach(post => {
             let {url, title, date} = post;
