@@ -10,7 +10,9 @@ const pagedPostsByTagColl = require("./collections/pagedPostsByTag");
 
 module.exports = (config) => {
 
-    config.addPlugin(pluginTailwind);
+    config.addPlugin(pluginTailwind, {
+        src: "src/assets/css/*"
+    });
 
     config.setDataDeepMerge(true);
 
