@@ -3,7 +3,11 @@
 
 A simple starter project to create a blog using Eleventy and Tailwind CSS
 
-![sip](https://i.imgur.com/wGj2YZD.jpg)
+<details>
+  <summary>Screenshot</summary>
+  
+  ![](https://i.imgur.com/wGj2YZD.jpg)
+</details>
 
 See demo [here](https://vredeburg.netlify.app)!
 
