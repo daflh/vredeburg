@@ -1,4 +1,4 @@
 <div class="mt-3 clearfix">
-    <a href="{% if not paged.first %}{{ pagination.href.previous }}{% else %}javascript:void(0){% endif %}" class="float-left bg-white font-semibold py-2 px-4 border rounded shadow-md text-gray-800 {% if not paged.first %}cursor-pointer hover:bg-gray-100{% else %}cursor-default text-opacity-75{% endif %}">Previous</a>
-    <a href="{% if not paged.last %}{{ pagination.href.next }}{% else %}javascript:void(0){% endif %}" class="float-right bg-white font-semibold py-2 px-4 border rounded shadow-md text-gray-800 {% if not paged.last %}cursor-pointer hover:bg-gray-100{% else %}cursor-default text-opacity-75{% endif %}">Next</a>
+    <a href="{% if not paged.first %}{{ pagination.href.previous | url }}{% else %}javascript:void(0){% endif %}" class="float-left bg-white font-semibold py-2 px-4 border rounded shadow-md text-gray-800 {% if not paged.first %}cursor-pointer hover:bg-gray-100{% else %}cursor-default text-opacity-75{% endif %}">Previous</a>
+    <a href="{% if not paged.last %}{{ pagination.href.next | url }}{% else %}javascript:void(0){% endif %}" class="float-right bg-white font-semibold py-2 px-4 border rounded shadow-md text-gray-800 {% if not paged.last %}cursor-pointer hover:bg-gray-100{% else %}cursor-default text-opacity-75{% endif %}">Next</a>
 </div>

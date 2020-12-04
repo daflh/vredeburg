@@ -2,7 +2,10 @@ module.exports = {
     title: "Vredeburg",
     description: "Eleventy starter project to create a blog",
     keywords: ["eleventy", "template", "simple", "clean"],
-    url: "https://vredeburg.netlify.app", // don't include trailing slash!
-    paginate: 6, // how many posts do you want for each page
-    // disqusShortname: "your-shortname" // only if you want to add disqus to your site
+    // your site url without trailing slash
+    url: "https://vredeburg.netlify.app",
+    // how many posts you want to show for each page
+    paginate: 6,
+    // if you want to add disqus to your site
+    // disqusShortname: "your-shortname"
 }

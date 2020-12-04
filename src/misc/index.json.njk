@@ -4,7 +4,7 @@ permalink: "/index.json"
 [
     {% for post in collections.posts %}
     {
-        "url": "{{ post.url }}",
+        "url": "{{ post.url | url }}",
         "title": "{{ post.data.title }}",
         "date": "{{ post.data.page.date | readableDate }}"
     }{% if not loop.last %},{% endif %}

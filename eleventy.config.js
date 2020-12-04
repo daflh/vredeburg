@@ -41,6 +41,7 @@ module.exports = (config) => {
             input: "src",
             output: "dist"
         },
+        // pathPrefix: "/subfolder/",
         templateFormats: ["md", "njk", "html"],
         dataTemplateEngine: "njk",
         markdownTemplateEngine: "njk"

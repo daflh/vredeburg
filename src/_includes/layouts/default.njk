@@ -29,15 +29,15 @@
         <meta name="keywords" content="{{ metaKeywords }}">
         <meta name="author" content="{{ author.name }}">
         <meta name="robots" content="index, follow">
-        <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-        <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png">
-        <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+        <link rel="canonical" href="{{ site.url | url }}{{ page.url }}">
+        <link rel="shortcut icon" type="image/png" href="{{ '/assets/img/favicon.png' | url }}">
+        <link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | url }}">
         <link rel="dns-prefetch" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
-        <link rel="stylesheet" href="/assets/css/main.css">
+        <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
 	</head>	
   
 	<body class="flex flex-col h-screen bg-white text-gray-800 leading-normal break-words">
@@ -52,9 +52,9 @@
             {% endif %}
         </main>
         {% include "partials/footer.njk" %}
-        <script src="/assets/js/main.js"></script>
+        <script src="{{ '/assets/js/main.js' | url }}"></script>
         {% if page.url === "/search/" %}
-        <script src="/assets/js/search.js"></script>
+        <script src="{{ '/assets/js/search.js' | url }}"></script>
         {% endif %}
 	</body>
 </html>

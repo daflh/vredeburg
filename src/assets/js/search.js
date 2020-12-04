@@ -7,7 +7,7 @@
     let start = Number(params.get("start")) || 1;
     let size = Number(params.get("size")) || 12;
 
-    const posts = await fetch("/index.json").then(res => res.json());
+    const posts = await fetch("../index.json").then(res => res.json());
 
     const wrapper = document.getElementById("wrapper");
     const searchBox = document.getElementById("searchbox");
