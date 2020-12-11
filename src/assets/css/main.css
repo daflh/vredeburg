@@ -33,7 +33,7 @@ strong {
 }
 
 code {
-    @apply font-mono text-sm inline bg-gray-200 rounded px-1 py-1/2;
+    @apply font-mono text-sm inline bg-gray-200 rounded px-1 py-0.5;
 }
 
 pre {
@@ -45,7 +45,7 @@ pre code {
 }
 
 kbd {
-    @apply text-xs inline-block border px-1 py-1/2 align-middle font-normal font-mono shadow rounded;
+    @apply text-xs inline-block border px-1 py-0.5 align-middle font-normal font-mono shadow rounded;
 }
 
 blockquote {

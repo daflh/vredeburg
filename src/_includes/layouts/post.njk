@@ -9,7 +9,7 @@ layout: default
         {% if tags %}
         <div class="mt-3 text-center">
             {% for tag in tags %}
-            <a href="{{ '/tags/' | url }}{{ tag }}" class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-medium text-gray-700 m-1/2">#{{ tag }}</a>
+            <a href="{{ '/tags/' | url }}{{ tag }}" class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-medium text-gray-700 m-0.5">#{{ tag }}</a>
             {% endfor %}
         </div>
         {% endif %}
