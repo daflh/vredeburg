@@ -1,5 +1,9 @@
 (async function() {
 
+    if (location.pathname !== "/search/") {
+        return;
+    }
+
     let timeout;
 
     const params = new URL(window.location.href).searchParams;

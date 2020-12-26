@@ -1,8 +1,11 @@
 ---
 title: "Fearlessness: How to Stop Running from Space"
-date: 2019-01-16T10:00
+description: "This post uses an external image as a thumbnail"
+date: 2020-02-11T17:30
 thumb: "https://i.imgur.com/AAVR2qH.jpg"
-tags: motive
+tags: 
+    - tips
+    - sample
 ---
 
 We spend our days filling in every available space, cramming in more tasks, responding to messages, checking social media and online sites, watching videos.

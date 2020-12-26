@@ -1,9 +1,10 @@
 ---
 title: "7 Things You Should Know About Running a Small Business"
-date: 2020-02-23T02:33
+date: 2019-01-16T10:00
 thumb: "small-business.jpg"
 tags: 
-    - animal
+    - tips
+    - business
 ---
 
 When you start your small business, you will quickly become aware that there are many other little, but really important things as addition to the creation of the value that your small business will ship to the customers.

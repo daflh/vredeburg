@@ -2,9 +2,7 @@
 description: "Example of post without a title"
 date: 2020-04-20T18:30
 thumb: "windows-7.jpg"
-tags: 
-    - animal
-    - popular
+tags: sample
 ---
 
 Spoke as as other again ye. Hard on to roof he drew. So sell side ye in mr evil. Longer waited mr of nature seemed. Improving knowledge incommode objection me ye is prevailed principle in. Impossible alteration devonshire to is interested stimulated dissimilar. To matter esteem polite do if. 

@@ -17,44 +17,43 @@
     {%- endif -%}
 {%- endset -%}
 <!DOCTYPE html>
-<html lang="id">
-	<head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ metaTitle }}</title>
-        <meta name="title" content="{{ metaTitle }}">
-        <meta name="description" content="{{ metaDesc }}">
-        <meta name="keywords" content="{{ metaKeywords }}">
-        <meta name="author" content="{{ author.name }}">
-        <meta name="robots" content="index, follow">
-        <link rel="canonical" href="{{ site.url | url }}{{ page.url }}">
-        <link rel="shortcut icon" type="image/png" href="{{ '/assets/img/favicon.png' | url }}">
-        <link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | url }}">
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
-        <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
-	</head>	
-  
-	<body class="flex flex-col h-screen bg-white text-gray-800 leading-normal break-words">
-        {% include "partials/header.njk" %}
-        <main class="mx-7 lg:mx-6 mt-32 flex-grow">
-            {% if layout === "post" %}
+<html>
+    
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ metaTitle }}</title>
+    <meta name="title" content="{{ metaTitle }}">
+    <meta name="description" content="{{ metaDesc }}">
+    <meta name="keywords" content="{{ metaKeywords }}">
+    <meta name="author" content="{{ author.name }}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{ site.url | url }}{{ page.url }}">
+    <link rel="shortcut icon" type="image/png" href="{{ '/assets/img/favicon.png' | url }}">
+    <link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | url }}">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
+</head>	
+
+<body class="flex flex-col h-screen bg-white text-gray-800 leading-normal break-words">
+    {% include "partials/header.njk" %}
+    <main class="mx-7 lg:mx-6 mt-32 flex-grow">
+        {% if layout === "post" %}
+        {{ content | safe }}
+        {% else %}
+        <div class="max-w-5xl mx-auto">
             {{ content | safe }}
-            {% else %}
-            <div class="max-w-5xl mx-auto">
-                {{ content | safe }}
-            </div>
-            {% endif %}
-        </main>
-        {% include "partials/footer.njk" %}
-        <script src="{{ '/assets/js/main.js' | url }}"></script>
-        {% if page.url === "/search/" %}
-        <script src="{{ '/assets/js/search.js' | url }}"></script>
+        </div>
         {% endif %}
-	</body>
+    </main>
+    {% include "partials/footer.njk" %}
+    <script src="{{ '/assets/js/bundle.js' | url }}"></script>
+</body>
+
 </html>
