@@ -1,66 +1,112 @@
-(async function() {
+/*
+Search for posts with keyword given in the parameter "q"
+Only run on search page ("/search/")
+*/
 
-    if (location.pathname !== "/search/") {
-        return;
-    }
+class SearchPosts {
+  async init() {
+    const params = new URL(location.href).searchParams;
 
-    let timeout;
+    this.start = Number(params.get('start')) || 1;
+    this.size = Number(params.get('size')) || 12;
 
-    const params = new URL(window.location.href).searchParams;
-    let query = params.get("q");
-    let start = Number(params.get("start")) || 1;
-    let size = Number(params.get("size")) || 12;
-
-    const posts = await fetch("../index.json").then(res => res.json());
-
-    const wrapper = document.getElementById("wrapper");
-    const searchBox = document.getElementById("searchbox");
-    const info = document.getElementById("info");
-
-    if (query !== null) {
-        query = query.toLowerCase();
-        searchBox.value = query;
-    }
-
-    searchBox.addEventListener("keyup", function(e) {
-        this.value = this.value.toLowerCase();
-        clearTimeout(timeout);
-        timeout = setTimeout(() => {
-            query = this.value;
-            history.replaceState(null, null, `?q=${this.value}&start=${start}&size=${size}`);
-            display();
-        }, 500);
+    this.posts = await fetch('../index.json').then((res) => {
+      return res.json();
     });
 
-    display();
+    this.render(params.get('q'));
+  }
 
-    function display() {
-        wrapper.innerHTML = "";
-        if (query === null || query === "") return info.textContent = "Enter keywords in the search box above";
-        let filteredPosts = posts.filter(post => {
-            let postTitle = post.title.toLowerCase();
-            return postTitle.indexOf(query) !== -1;
-        });
-        if (filteredPosts.length === 0) return info.textContent = `No results found for "${query}"`;
-        let resultsFound = filteredPosts.length;
-        let slicedPosts = filteredPosts.slice(start - 1, start + size - 1);
-        let lastSliced = start + slicedPosts.length - 1;
-        let show = start < lastSliced ? `${start} to ${lastSliced}` : start;
-        info.textContent = `Showing ${show} of ${resultsFound} result${resultsFound > 1 ? "s" : ""} found`;
-        slicedPosts.forEach(post => {
-            let {url, title, date} = post;
-            wrapper.innerHTML += `
-            <div class="flex-single sm:flex-double md:flex-triple self-stretch p-2 mb-2">
-                <a href="${url}">
-                    <div class="rounded bg-gray-100 shadow-md h-full px-6 py-5">
-                        <div class="font-semibold text-lg mb-2 text-gray-900">${title}</div>
-                        <p class="text-gray-600 text-base mb-1" title="Published date">${date}</p>
-                    </div>
-                </a>
-            </div>
-            `;
-        });
+  render(query) {
+    const wrapperEl = document.getElementById('wrapper');
+    const searchBoxEl = document.getElementById('searchbox');
+    const infoEl = document.getElementById('info');
 
+    query = query.toLowerCase();
+
+    history.replaceState(null, null, `?q=${query}&start=${this.start}&size=${this.size}`);
+
+    searchBoxEl.value = query;
+    wrapperEl.innerHTML = '';
+
+    if (!query) {
+      infoEl.textContent = 'Enter keywords in the search box above';
+
+      return;
     }
 
-})();
+    const matchedPosts = this.posts.filter((post) => {
+      const postTitle = post.title.toLowerCase();
+
+      return postTitle.indexOf(query) !== -1;
+    });
+
+    if (matchedPosts.length === 0) {
+      infoEl.textContent = `No results were found for "${query}"`;
+
+      return;
+    }
+
+    const size = this.size;
+    const offset = this.start - 1;
+    const slicedPosts = matchedPosts.slice(offset, offset + size);
+
+    const lastPostIndex = offset + slicedPosts.length;
+    const showingRange = this.start < lastPostIndex ? `${this.start} to ${lastPostIndex}` : this.start;
+    const extraS = matchedPosts.length > 1 ? 's' : '';
+
+    infoEl.textContent = `Showing ${showingRange} of ${matchedPosts.length} result${extraS} found for "${query}"`;
+
+    slicedPosts.forEach((post) => {
+      const { url, title, date } = post;
+
+      wrapperEl.innerHTML += `
+                <div class="flex-single sm:flex-double md:flex-triple self-stretch p-2 mb-2">
+                    <a href="${url}">
+                        <div class="rounded bg-gray-100 shadow-md h-full px-6 py-5">
+                            <div class="font-semibold text-lg mb-2 text-gray-900">${title}</div>
+                            <p class="text-gray-600 text-base mb-1" title="Published date">${date}</p>
+                        </div>
+                    </a>
+                </div>
+            `;
+    });
+  }
+}
+
+if (location.pathname === '/search/') {
+  const searchBoxEl = document.getElementById('searchbox');
+  const searchPosts = new SearchPosts();
+
+  searchPosts.init();
+
+  searchBoxEl.addEventListener('keyup', debounce(function() {
+    searchPosts.render(this.value);
+  }, 400));
+}
+
+// https://github.com/sindresorhus/p-debounce
+function debounce(fn, wait) {
+  let timer;
+  let resolveList = [];
+
+  return function(...arguments_) {
+    return new Promise((resolve) => {
+      clearTimeout(timer);
+
+      timer = setTimeout(() => {
+        timer = null;
+
+        const result = fn.apply(this, arguments_);
+
+        for (resolve of resolveList) {
+          resolve(result);
+        }
+
+        resolveList = [];
+      }, wait);
+
+      resolveList.push(resolve);
+    });
+  };
+}
