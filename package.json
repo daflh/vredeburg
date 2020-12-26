@@ -19,9 +19,10 @@
 	},
 	"homepage": "https://github.com/dafiulh/vredeburg#readme",
 	"devDependencies": {
-		"@11ty/eleventy": "^0.11.0",
-		"cross-env": "^7.0.2",
-		"eleventy-plugin-tailwindcss": "^0.2.4",
+		"@11ty/eleventy": "^0.11.1",
+		"@tailwindcss/typography": "^0.3.1",
+		"cross-env": "^7.0.3",
+		"eleventy-plugin-tailwindcss": "^0.3.0",
 		"html-minifier": "^4.0.0",
 		"luxon": "^1.24.1",
 		"rimraf": "^3.0.2",

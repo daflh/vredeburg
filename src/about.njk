@@ -3,14 +3,14 @@ layout: default
 title: About Me
 ---
 
-<div class="flex flex-col items-center leading-relaxed text-lg">
+<div class="flex flex-col items-center text-lg">
     {% if author.avatar %}
     <a href="{{ author.homepage | url }}" target="_blank" rel="noopener">
         <img class="h-32 md:h-40 rounded-full" alt="Author avatar" src="{{ author.avatar | url }}">
     </a>
     {% endif %}
     <div class="text-center mt-8">
-        <h1 class="text-2xl mt-0 mb-1">
+        <h1 class="text-2xl font-medium text-gray-800 leading-relaxed mt-0 mb-1">
             <a href="{{ author.homepage | url }}" target="_blank" rel="noopener">{{ author.name }}</a>
         </h1>
         {% if author.email %}

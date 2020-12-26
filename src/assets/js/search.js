@@ -61,15 +61,15 @@ class SearchPosts {
       const { url, title, date } = post;
 
       wrapperEl.innerHTML += `
-                <div class="flex-single sm:flex-double md:flex-triple self-stretch p-2 mb-2">
-                    <a href="${url}">
-                        <div class="rounded bg-gray-100 shadow-md h-full px-6 py-5">
-                            <div class="font-semibold text-lg mb-2 text-gray-900">${title}</div>
-                            <p class="text-gray-600 text-base mb-1" title="Published date">${date}</p>
-                        </div>
-                    </a>
-                </div>
-            `;
+        <div class="w-full sm:w-1/2 md:w-1/3 self-stretch p-2 mb-2">
+          <a href="${url}">
+            <div class="rounded shadow-md h-full px-6 py-5">
+              <div class="font-semibold text-lg mb-2">${title}</div>
+              <p class="text-gray-700 mb-1" title="Published date">${date}</p>
+            </div>
+          </a>
+        </div>
+      `;
     });
   }
 }

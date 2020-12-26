@@ -63,8 +63,7 @@ func setCookie(cookie *http.Cookie, w interface{}) error {
 
 This is blockquote, Will make it *better now*
 
-> 'I want to do with you what spring does with the cherry trees.' <cite>cited ~Pablo Neruda</cite>*
-
+> 'I want to do with you what spring does with the cherry trees.' ~ Pablo Neruda
 
 > Et harum quidem *rerum facilis* est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit
 
@@ -82,15 +81,15 @@ Ordered list
 
 ## Tables
 
-Tables aren't part of the core Markdown spec, but Hugo supports supports them out-of-the-box.
+Tables aren't part of the core Markdown spec, but we supports supports them out-of-the-box.
 
-   Name | Age
---------|------
-    Bob | 27
-  Alice | 23
+| Name 	| Age 	|
+| ----- | ----- |
+| Bob	| 27	|
+| Alice | 23	|
 
-#### Inline Markdown within tables
+Inline Markdown within tables
 
-| Inline&nbsp;&nbsp;&nbsp;     | Markdown&nbsp;&nbsp;&nbsp;  | In&nbsp;&nbsp;&nbsp;                | Table      |
+| Inline     | Markdown  | In                | Table      |
 | ---------- | --------- | ----------------- | ---------- |
-| *italics*  | **bold**  | ~~strikethrough~~&nbsp;&nbsp;&nbsp; | `code`     |
+| *italics*  | **bold**  | ~~strikethrough~~ | `code`     |

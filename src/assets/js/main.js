@@ -10,12 +10,12 @@ window.addEventListener('scroll', () => {
 
   if (currPos > lastPos) {
     if (currPos > header.offsetHeight) {
-      header.classList.add('hide-header');
-      header.classList.remove('nice-shadow');
+      header.classList.add('-translate-y-full');
+      header.classList.remove('header-shadow');
     }
   } else {
-    header.classList.remove('hide-header');
-    header.classList.add('nice-shadow');
+    header.classList.remove('-translate-y-full');
+    header.classList.add('header-shadow');
   }
 
   lastPos = currPos;

@@ -11,8 +11,8 @@ eleventyComputed:
 ---
 
 <div class="mb-8 text-center">
-    <h3 class="my-0 text-gray-700">Tagged with</h3>
-    <h1 class="mt-0 text-4xl">{{ paged.name | capitalize }}</h1>
+    <h3 class="text-xl font-medium text-gray-700 my-0">Tagged with</h3>
+    <h1 class="text-4xl font-medium leading-normal mt-0">{{ paged.name | capitalize }}</h1>
 </div>
 <div class="flex flex-wrap -mx-2">
     {% include "partials/post-grid.njk" %}
