@@ -22,14 +22,14 @@ class SearchPosts {
     const searchBoxEl = document.getElementById('searchbox');
     const infoEl = document.getElementById('info');
 
-    query = query.toLowerCase();
+    query = typeof query === 'string' ? query.toLowerCase() : '';
 
     history.replaceState(null, null, `?q=${query}&start=${this.start}&size=${this.size}`);
 
     searchBoxEl.value = query;
     wrapperEl.innerHTML = '';
 
-    if (!query) {
+    if (query === '') {
       infoEl.textContent = 'Enter keywords in the search box above';
 
       return;
