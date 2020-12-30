@@ -11,4 +11,6 @@ permalink: "{% if paged.index > 0 %}page/{{ paged.index + 1 }}/{% endif %}index.
     {% include "partials/post-grid.njk" %}
 </div>
 
+{% if collections.posts.length > site.paginate %}
 {% include "partials/paginator.njk" %}
+{% endif %}
