@@ -18,4 +18,6 @@ eleventyComputed:
     {% include "partials/post-grid.njk" %}
 </div>
 
+{% if collections.tagList[paged.name] > site.paginate %}
 {% include "partials/paginator.njk" %}
+{% endif %}
