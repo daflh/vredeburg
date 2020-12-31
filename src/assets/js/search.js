@@ -52,7 +52,7 @@ class SearchPosts {
     const slicedPosts = matchedPosts.slice(offset, offset + size);
 
     const lastPostIndex = offset + slicedPosts.length;
-    const showingRange = this.start < lastPostIndex ? `${this.start} to ${lastPostIndex}` : this.start;
+    const showingRange = this.start < lastPostIndex || this.start !== 1 ? `${this.start} to ${lastPostIndex}` : this.start;
     const extraS = matchedPosts.length > 1 ? 's' : '';
 
     infoEl.textContent = `Showing ${showingRange} of ${matchedPosts.length} result${extraS} found for "${query}"`;
