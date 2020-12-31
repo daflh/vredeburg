@@ -6,7 +6,7 @@ title: About Me
 <div class="flex flex-col items-center text-lg">
     {% if author.avatar %}
     <a href="{{ author.homepage | url }}" target="_blank" rel="noopener">
-        <img class="h-32 md:h-40 rounded-full" alt="Author avatar" src="{{ author.avatar | url }}">
+        <img class="w-32 h-32 md:w-40 md:h-40 rounded-full" src="{{ author.avatar | url }}" width="128" height="128" alt="Author avatar">
     </a>
     {% endif %}
     <div class="text-center mt-8">

@@ -3,7 +3,7 @@
 <div class="w-full sm:w-1/2 md:w-1/3 self-stretch p-2 mb-2">
     <div class="rounded shadow-md h-full">
         <a href="{{ post.url | url }}">
-            <img class="w-full m-0 rounded-t lazy" src="{{ lazyImage }}" data-src="{% if post.data.thumb %}{{ post.data.thumb | url }}{% else %}{{ '/assets/img/no-image.svg' | url }}{% endif %}" alt="This post thumbnail">
+            <img class="w-full m-0 rounded-t lazy" src="{{ lazyImage }}" data-src="{% if post.data.thumb %}{{ post.data.thumb | url }}{% else %}{{ '/assets/img/no-image.svg' | url }}{% endif %}" width="960" height="500" alt="This post thumbnail">
         </a>
         <div class="px-6 py-5">
             <div class="font-semibold text-lg mb-2">
