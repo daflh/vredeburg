@@ -4,7 +4,7 @@ pagination:
     data: collections.pagedPosts
     size: 1
     alias: paged
-permalink: "{% if paged.index > 0 %}page/{{ paged.index + 1 }}/{% endif %}index.html"
+permalink: "{% if paged.number > 1 %}page/{{ paged.number }}/{% endif %}index.html"
 ---
 
 <div class="flex flex-wrap -mx-2">
