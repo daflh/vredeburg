@@ -13,10 +13,10 @@ module.exports = (config) => {
   config.addLayoutAlias('default', 'layouts/default.njk');
   config.addLayoutAlias('post', 'layouts/post.njk');
 
-  config.addFilter('readableDate', require('./lib/readableDate'));
-  config.addFilter('minifyJs', require('./lib/minification/minifyJs'));
+  config.addFilter('readableDate', require('./lib/filters/readableDate'));
+  config.addFilter('minifyJs', require('./lib/filters/minifyJs'));
 
-  config.addTransform('minifyHtml', require('./lib/minification/minifyHtml'));
+  config.addTransform('minifyHtml', require('./lib/transforms/minifyHtml'));
 
   config.addCollection('posts', require('./lib/collections/posts'));
   config.addCollection('tagList', require('./lib/collections/tagList'));
