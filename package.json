@@ -4,8 +4,8 @@
 	"description": "",
 	"scripts": {
 		"clean": "rimraf dist",
-		"start": "npm run clean && cross-env NODE_ENV=development npx @11ty/eleventy --serve --config eleventy.config.js",
-		"build": "npm run clean && cross-env NODE_ENV=production npx @11ty/eleventy --config eleventy.config.js",
+		"start": "npm run clean && cross-env NODE_ENV=development eleventy --serve",
+		"build": "npm run clean && cross-env NODE_ENV=production eleventy",
 		"debug": "DEBUG=Eleventy* npm run build"
 	},
 	"repository": {
