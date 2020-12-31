@@ -1,23 +1,15 @@
 ---
 layout: default
-eleventyExcludeFromCollections: true
-pagination:
-    data: collections.pagedPostsByTag
-    size: 1
-    alias: paged
-permalink: "tags/{{ paged.tagName }}/{% if paged.number > 1 %}{{ paged.number }}/{% endif %}index.html"
-eleventyComputed:
-    title: "Tagged with \"{{ paged.tagName | capitalize }}\""
+title: Tag List
+permalink: "tags/index.html"
 ---
 
-<div class="mb-8 text-center">
-    <h3 class="text-xl font-medium text-gray-700 my-0">Tagged with</h3>
-    <h1 class="text-4xl font-medium leading-normal mt-0">{{ paged.tagName | capitalize }}</h1>
+<h1 class="text-3xl leading-normal font-bold mt-0 mb-7 text-center">{{ title }}</h1>
+<div class="flex justify-center flex-wrap">
+    {% for name, length in collections.tagList %}
+    <a href="{{ '/tags/' | url }}{{ name }}" class="inline-block mx-1 mb-3 px-4 py-2 bg-gray-200 text-gray-700 font-medium rounded-full">
+        {{ name | capitalize }}
+        <span class="px-2 py-1 ml-1 text-xs font-semibold bg-teal-300 text-teal-800 rounded-full">{{ length }}</span>
+    </a>
+    {% endfor %}
 </div>
-<div class="flex flex-wrap -mx-2">
-    {% include "partials/post-grid.njk" %}
-</div>
-
-{% if collections.tagList[paged.tagName] > site.paginate %}
-{% include "partials/paginator.njk" %}
-{% endif %}

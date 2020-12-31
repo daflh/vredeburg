@@ -1,0 +1,23 @@
+---
+layout: default
+eleventyExcludeFromCollections: true
+pagination:
+    data: collections.pagedPostsByTag
+    size: 1
+    alias: paged
+permalink: "tags/{{ paged.tagName }}/{% if paged.number > 1 %}{{ paged.number }}/{% endif %}index.html"
+eleventyComputed:
+    title: "Tagged with \"{{ paged.tagName | capitalize }}\""
+---
+
+<div class="mb-8 text-center">
+    <h3 class="text-xl font-medium text-gray-700 my-0">Tagged with</h3>
+    <h1 class="text-4xl font-medium leading-normal mt-0">{{ paged.tagName | capitalize }}</h1>
+</div>
+<div class="flex flex-wrap -mx-2">
+    {% include "partials/post-grid.njk" %}
+</div>
+
+{% if collections.tagList[paged.tagName] > site.paginate %}
+{% include "partials/paginator.njk" %}
+{% endif %}
