@@ -3,7 +3,7 @@ title: "TitamWhatsApp v18.00 by Titam Mods[Latest Version]"
 date: 2020-11-08T00.00
 thumb: "https://biolinc.me/uploads/avatars/2341c3f60e29c1210af12391ada57b7c.png"
 tags:
-     -titamwhatsapp
+     - titamwhatsapp
 ---
 Direct Download TitamWA 18.00 Apk Latest Version by Titam Mods November 2020 Update on Base 2.20.164 with YT Lock on Start and Pause button along with Advanced Lock Protection and many more.... 
 
