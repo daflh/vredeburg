@@ -5,7 +5,6 @@ thumb: "windows-7.jpg"
 tags:
      - titamwhatsapp
 ---
-
 Direct Download TitamWA 18.00 Apk Latest Version by Titam Mods November 2020 Update on Base 2.20.164 with YT Lock on Start and Pause button along with Advanced Lock Protection and many more.... 
 
 ## What's New in TitaWA v18.00 :- 
@@ -23,7 +22,7 @@ Direct Download TitamWA 18.00 Apk Latest Version by Titam Mods November 2020 Upd
 *Added a New Privacy Interface Nova > Nova Changelog
 *New Bubbles are Added to make Chat More Attractive
 *Added serveal TBS Immunity Options
-*[See More..](URL) 
+*[See More..](https://androidromslab.netlify.app) 
 
 ## Join Our Telegram Channels 
 
