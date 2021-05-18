@@ -1,47 +1,95 @@
 ---
-title: "TitamWhatsApp v18.00 by Titam Mods[Latest Version]"
-date: 2020-11-08T00.00
-thumb: "URL"
-tags:
-     -titamwhatsapp
+title: "Typography"
+date: 2020-06-21T08:04
+thumb: "typography.png"
+tags: 
+    - popular
+    - sample
 ---
-Direct Download TitamWA 18.00 Apk Latest Version by Titam Mods November 2020 Update on Base 2.20.164 with YT Lock on Start and Pause button along with Advanced Lock Protection and many more.... 
 
-## What's New in TitamWA v18.00 :- 
+Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.
 
-*Base Updated to 2.20.164
-*Added Lock at Youtube video with Start and Pause Button
-*Added New Media-Setting Function
-*Lock are made more stronger than before
-*[See More...](URL)
+Nunc tristique velit ligula. Phasellus vel massa a lorem facilisis interdum ut ac erat. Sed convallis a nisi non elementum. Vivamus ac ultricies dolor. Fusce in erat rhoncus, ultrices ante placerat, vulputate odio. Aliquam porta varius enim vitae tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur augue mauris, in scelerisque mauris dictum nec. Pellentesque a venenatis est. Curabitur ut quam tempus, dictum elit nec, vehicula dui. Nunc vestibulum lorem ac finibus consequat.
 
+# Heading 1
 
-## Features Of TitamWA :- 
+pawankumar et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.
 
-*Added New and Attractive Source Option
-*Added a New Privacy Interface Nova > Nova Changelog
-*New Bubbles are Added to make Chat More Attractive
-*Added serveal TBS Immunity Options
-*[See More..](URL) 
+## Heading 2
 
-## Join Our Telegram Channels 
+Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.
 
-1. [Instagram Mods Official](https://telegram.me/instamodsofficial)
-2. [WhatsApp Mods Official](https://telegram.me/wamods)
-3. [Lootega India (For Indians Only)](https://telegram.me/lootegaindia)
-4. [Watch Live Sports Movies and Web Series](https://telegram.me/joinchat/AAAAAEaubY1PXSsxR50Rug)
-5. [Legendary Tricks](https://telegram.me/joinchat/AAAAAFlLAeHug8Sf6ECpuA) 
+### Heading 3
 
-## How to Download TitamWA v18.0 :- 
+Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.
 
-* Move Below and You Will Find 2 Types of Download Links One of DropGalaxy and One of Google Drive.
-* The Download Links have Clearly Written Download TitamWA v18.0 on them. Click on the Link of Whichever Variant You Like and Download Your Mod.
-* Try Both and Download From Whichever Link You Like DropGalaxy or Google Drive Choice is Yours. 
+#### Heading 4
 
-## DropGalaxy Download Link :- 
+Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.
 
-[Direct Download TitamWA](URL) 
+##### Heading 5
 
-## Google Drive Download Link :- 
+Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.
 
-[Direct Download TitamWA](URL)
+###### Heading 6
+
+Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.
+
+## Typography
+
+Lid est laborum et dolorum fuga, This is [an example](http://example.com/ "Title") inline link. Et harum quidem rerum facilis, **This is bold** and *emphasis* cumque nihilse impedit quo minus id quod amets untra dolor amet sad. While this is `code block()` and following is a `pre` tag
+
+	print 'this is pre tag'
+
+Following is the syntax highlighted code block
+
+```go
+func getCookie(name string, r interface{}) (*http.Cookie, error) {
+	rd := r.(*http.Request)
+	cookie, err := rd.Cookie(name)
+	if err != nil {
+		return nil, err
+	}
+	return cookie, nil
+}
+
+func setCookie(cookie *http.Cookie, w interface{}) error {
+	// Get write interface registered using `Acquire` method in handlers.
+	wr := w.(http.ResponseWriter)
+	http.SetCookie(wr, cookie)
+	return nil
+}
+```
+
+This is blockquote, Will make it *better now*
+
+> 'I want to do with you what spring does with the cherry trees.' ~ Pablo Neruda
+
+> Et harum quidem *rerum facilis* est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit
+
+Unordered list
+
+*   Red
+*   Green
+*   Blue
+
+Ordered list
+
+1.	Red
+2.  Green
+3.  Blue
+
+## Tables
+
+Tables aren't part of the core Markdown spec, but we supports supports them out-of-the-box.
+
+| Name 	| Age 	|
+| ----- | ----- |
+| Bob	| 27	|
+| Alice | 23	|
+
+Inline Markdown within tables
+
+| Inline     | Markdown  | In                | Table      |
+| ---------- | --------- | ----------------- | ---------- |
+| *italics*  | **bold**  | ~~strikethrough~~ | `code`     |
