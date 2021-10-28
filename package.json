@@ -22,6 +22,7 @@
 	"homepage": "https://github.com/dafiulh/vredeburg#readme",
 	"devDependencies": {
 		"@11ty/eleventy": "^0.11.1",
+		"@11ty/eleventy-plugin-syntaxhighlight": "^3.1.3",
 		"@tailwindcss/typography": "^0.3.1",
 		"cross-env": "^7.0.3",
 		"eleventy-plugin-tailwindcss": "^0.3.0",
