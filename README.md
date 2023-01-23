@@ -14,7 +14,7 @@ See demo [here](https://vredeburg.netlify.app)!
 ## Getting Started
 1. Clone this repository
 ```bash
-git clone https://github.com/dafiulh/vredeburg.git blog-name
+git clone https://github.com/daflh/vredeburg.git blog-name
 ```
 2. Navigate to the directory
 ```bash

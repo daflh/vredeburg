@@ -12,16 +12,16 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/dafiulh/vredeburg.git"
+		"url": "git+https://github.com/daflh/vredeburg.git"
 	},
 	"author": "Dafiul Haq",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/dafiulh/vredeburg/issues"
+		"url": "https://github.com/daflh/vredeburg/issues"
 	},
-	"homepage": "https://github.com/dafiulh/vredeburg#readme",
+	"homepage": "https://github.com/daflh/vredeburg#readme",
 	"devDependencies": {
-		"@11ty/eleventy": "^0.11.1",
+		"@11ty/eleventy": "^1.0.2",
 		"@tailwindcss/typography": "^0.3.1",
 		"cross-env": "^7.0.3",
 		"eleventy-plugin-tailwindcss": "^0.3.0",
