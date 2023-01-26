@@ -1,33 +1,37 @@
 {
-	"name": "vredeburg",
-	"version": "1.0.0",
-	"description": "",
-	"scripts": {
-		"clean": "rimraf dist",
-		"start": "npm run serve",
-		"serve": "npm run clean && cross-env NODE_ENV=development eleventy --serve",
-		"watch": "npm run clean && cross-env NODE_ENV=development eleventy --watch",
-		"build": "npm run clean && cross-env NODE_ENV=production eleventy",
-		"debug": "DEBUG=Eleventy* npm run build"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/daflh/vredeburg.git"
-	},
-	"author": "Dafiul Haq",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/daflh/vredeburg/issues"
-	},
-	"homepage": "https://github.com/daflh/vredeburg#readme",
-	"devDependencies": {
-		"@11ty/eleventy": "^1.0.2",
-		"@tailwindcss/typography": "^0.3.1",
-		"cross-env": "^7.0.3",
-		"eleventy-plugin-tailwindcss": "^0.3.0",
-		"html-minifier": "^4.0.0",
-		"luxon": "^1.24.1",
-		"rimraf": "^3.0.2",
-		"terser": "^4.8.0"
-	}
+  "name": "vredeburg",
+  "version": "2.0.0",
+  "description": "A simple starter project to create a blog using Eleventy and Tailwind CSS",
+  "scripts": {
+    "start": "npm run serve",
+    "watch": "concurrently -c auto npm:css:watch npm:11ty:watch",
+    "serve": "concurrently -c auto npm:css:watch npm:11ty:serve",
+    "build": "npm run css:build && npm run 11ty:build",
+    "debug": "cross-env DEBUG=Eleventy* npm run build",
+    "11ty:watch": "cross-env NODE_ENV=development eleventy --watch --incremental",
+    "11ty:serve": "cross-env NODE_ENV=development eleventy --serve --incremental",
+    "11ty:build": "cross-env NODE_ENV=production eleventy",
+    "css:watch": "npx tailwindcss -i src/assets/css/main.css -o dist/assets/css/main.css -w",
+    "css:build": "npx tailwindcss -i src/assets/css/main.css -o dist/assets/css/main.css -m"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daflh/vredeburg.git"
+  },
+  "author": "Dafiul Haq",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/daflh/vredeburg/issues"
+  },
+  "homepage": "https://github.com/daflh/vredeburg#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "2.0.0-beta.1",
+    "@tailwindcss/typography": "^0.5.9",
+    "concurrently": "^7.6.0",
+    "cross-env": "^7.0.3",
+    "dayjs": "^1.11.7",
+    "html-minifier": "^4.0.0",
+    "tailwindcss": "^3.2.4",
+    "terser": "^5.16.1"
+  }
 }

@@ -1,12 +1,4 @@
-const pluginTailwind = require('eleventy-plugin-tailwindcss');
-
 module.exports = (config) => {
-  config.addPlugin(pluginTailwind, {
-    src: 'src/assets/css/*'
-  });
-
-  config.setDataDeepMerge(true);
-
   config.addPassthroughCopy('src/assets/img/**/*');
   config.addPassthroughCopy({ 'src/posts/img/**/*': 'assets/img/' });
 

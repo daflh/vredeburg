@@ -7,7 +7,7 @@ permalink: "tags/index.html"
 <h1 class="text-3xl leading-normal font-bold mt-0 mb-7 text-center">{{ title }}</h1>
 <div class="flex justify-center flex-wrap">
     {% for name, length in collections.tagList %}
-    <a href="{{ '/tags/' | url }}{{ name }}" class="inline-block mx-1 mb-3 px-4 py-2 bg-gray-200 text-gray-700 font-medium rounded-full">
+    <a href="{{ '/tags/' | url }}{{ name }}" class="inline-block mx-1 mb-3 px-4 py-2 bg-slate-200 text-slate-700 font-medium rounded-full">
         {{ name | capitalize }}
         <span class="px-2 py-1 ml-1 text-xs font-semibold bg-teal-300 text-teal-800 rounded-full">{{ length }}</span>
     </a>

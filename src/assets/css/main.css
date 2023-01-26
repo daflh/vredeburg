@@ -3,20 +3,16 @@
 @tailwind utilities;
 
 @layer base {
-    body {
-        font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,helvetica,Arial,sans-serif;
-    }
+  body {
+    font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,helvetica,Arial,sans-serif;
+  }
 }
 
 @layer utilities {
-    .header-shadow {
-        box-shadow: 0 3px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 5px -1px rgba(0, 0, 0, 0.06)
-    }
-
-    .visually-hidden { 
-        @apply block absolute h-px w-px overflow-hidden whitespace-nowrap;
-        clip: rect(1px 1px 1px 1px);
-        clip: rect(1px, 1px, 1px, 1px);
-        clip-path: inset(1px);
-    }
+  .visually-hidden { 
+    @apply block absolute h-px w-px overflow-hidden whitespace-nowrap;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(1px);
+  }
 }

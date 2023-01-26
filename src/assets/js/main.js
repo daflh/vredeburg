@@ -11,11 +11,11 @@ window.addEventListener('scroll', () => {
   if (currPos > lastPos) {
     if (currPos > header.offsetHeight) {
       header.classList.add('-translate-y-full');
-      header.classList.remove('header-shadow');
+      header.classList.remove('shadow-md');
     }
   } else {
     header.classList.remove('-translate-y-full');
-    header.classList.add('header-shadow');
+    header.classList.add('shadow-md');
   }
 
   lastPos = currPos;

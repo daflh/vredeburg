@@ -7,10 +7,10 @@
         </a>
         <div class="px-6 py-5">
             <div class="font-semibold text-lg mb-2">
-                <a class="text-gray-900 hover:text-gray-700" href="{{ post.url | url }}">{{ post.data.title }}</a>
+                <a class="text-slate-900 hover:text-slate-700" href="{{ post.url | url }}">{{ post.data.title }}</a>
             </div>
-            <p class="text-gray-700 mb-1" title="Published date">{{ post.data.page.date | readableDate }}</p>
-            <p class="text-gray-800">
+            <p class="text-slate-700 mb-1" title="Published date">{{ post.data.page.date | readableDate }}</p>
+            <p class="text-slate-800">
                 {% if post.data.description %}
                 {{ post.data.description }}
                 {% else %}
